@@ -1,7 +1,7 @@
 # 📦 Hold My Items – Animation Script Documentation
 
 **Mod Name**: Hold My Items  
-**Author**: sapling.
+**Author**: sapling
 **Description**: Customize first-person hand and item animations via resource packs using `.hmi` scripts and simple Java-based logic.
 
 ---
