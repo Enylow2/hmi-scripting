@@ -155,27 +155,37 @@ P.getPitch(player);           // pitch (vertical)
 ```
 
 ---
-🧱 Item Utilities (I)
-The I class provides functions to inspect the item currently being rendered. You can use it to check if the player is holding a specific item or something from a tag group.
+## 🧱 Item Utilities (`I`)
 
-✅ Checking Item Type
-java
-I.isOf(itemStack, Items.DIAMOND_SWORD);
-Returns true if the item is exactly a Diamond Sword.
+The `I` class provides functions to inspect the item currently being rendered. You can use it to check if the player is holding a specific item or something from a tag group.
 
-🏷 Checking Item Tags
-java
-I.isIn(itemStack, ItemTags.SWORDS);
-Returns true if the item is in the #swords tag.
+### ✅ Checking Item Type
 
-❌ Checking if Hand is Empty
-java
-I.isEmpty(itemStack);
-Returns true if the player’s hand is empty.
+`I.isOf(itemStack, Items.DIAMOND_SWORD);`
 
-🔍 Example Use
-java
-if (I.isOf(itemStack, Items.SHIELD)) {
+Returns `true` if the item is exactly a Diamond Sword.
+
+* * * * *
+
+### 🏷 Checking Item Tags
+
+`I.isIn(itemStack, ItemTags.SWORDS);`
+
+Returns `true` if the item is in the `#swords` tag.
+
+* * * * *
+
+### ❌ Checking if Hand is Empty
+
+`I.isEmpty(itemStack);`
+
+Returns `true` if the player's hand is empty.
+
+* * * * *
+
+### 🔍 Example Use
+
+`if (I.isOf(itemStack, Items.SHIELD)) {
     M.moveZ(matrices, -0.2);
     M.rotateY(matrices, 15);
 }
@@ -186,18 +196,28 @@ if (I.isIn(itemStack, ItemTags.FLOWERS)) {
 
 if (I.isEmpty(itemStack)) {
     M.rotateZ(matrices, 45);
-}
-📦 Item and Tag References
-Items class contains every item in the game:
+}`
 
-java
-Items.APPLE, Items.CARROT, Items.CROSSBOW, ...
-ItemTags contains built-in tag groups:
+* * * * *
 
-java
-ItemTags.SWORDS, ItemTags.LOGS, ItemTags.BANNERS, ...
+### 📦 Item and Tag References
 
+-   `Items` class contains every item in the game:
 
+    java
+
+    КопироватьРедактировать
+
+    `Items.APPLE, Items.CARROT, Items.CROSSBOW, ...`
+
+-   `ItemTags` contains built-in tag groups:
+
+    java
+
+    КопироватьРедактировать
+
+    `ItemTags.SWORDS, ItemTags.LOGS, ItemTags.BANNERS, ...`
+---
 ## 📂 Float Registry
 
 Persist and reuse values across frames:
