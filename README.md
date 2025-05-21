@@ -56,7 +56,7 @@ This returns the time (in seconds) since the last frame. Use it for time-based m
 ```java
 float t = floatRegistry.getOrDefault("timer", 0.0);
 t += delta;
-floatRegistry.put("timer", t);
+floatRegistry.putIfAbsent("timer", t);
 ```
 
 ---
@@ -220,7 +220,7 @@ Use it for:
 ```java
 float t = floatRegistry.getOrDefault("bob", 0.0);
 t += HoldMyItems.getDeltaTime();
-floatRegistry.put("bob", t);
+floatRegistry.putIfAbsent("bob", t);
 
 float bobOffset = M.sin(t * 2.0) * 0.1;
 M.moveY(matrices, bobOffset);
@@ -238,7 +238,7 @@ if (P.isUsingItem(player)) {
 float t = floatRegistry.getOrDefault("time", 0.0);
 t += HoldMyItems.getDeltaTime() * 0.5;
 t = t % 1.0; // Keep it looping
-floatRegistry.put("time", t);
+floatRegistry.putIfAbsent("time", t);
 
 float eased = Easings.easeInOutBack(t);
 M.moveZ(matrices, eased * -0.2);
