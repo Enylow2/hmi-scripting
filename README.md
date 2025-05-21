@@ -155,6 +155,48 @@ P.getPitch(player);           // pitch (vertical)
 ```
 
 ---
+🧱 Item Utilities (I)
+The I class provides functions to inspect the item currently being rendered. You can use it to check if the player is holding a specific item or something from a tag group.
+
+✅ Checking Item Type
+java
+I.isOf(itemStack, Items.DIAMOND_SWORD);
+Returns true if the item is exactly a Diamond Sword.
+
+🏷 Checking Item Tags
+java
+I.isIn(itemStack, ItemTags.SWORDS);
+Returns true if the item is in the #swords tag.
+
+❌ Checking if Hand is Empty
+java
+I.isEmpty(itemStack);
+Returns true if the player’s hand is empty.
+
+🔍 Example Use
+java
+if (I.isOf(itemStack, Items.SHIELD)) {
+    M.moveZ(matrices, -0.2);
+    M.rotateY(matrices, 15);
+}
+
+if (I.isIn(itemStack, ItemTags.FLOWERS)) {
+    M.moveY(matrices, M.sin(P.getPitch(player) * 0.1) * 0.1);
+}
+
+if (I.isEmpty(itemStack)) {
+    M.rotateZ(matrices, 45);
+}
+📦 Item and Tag References
+Items class contains every item in the game:
+
+java
+Items.APPLE, Items.CARROT, Items.CROSSBOW, ...
+ItemTags contains built-in tag groups:
+
+java
+ItemTags.SWORDS, ItemTags.LOGS, ItemTags.BANNERS, ...
+
 
 ## 📂 Float Registry
 
