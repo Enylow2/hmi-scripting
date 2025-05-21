@@ -205,9 +205,9 @@ if (I.isEmpty(itemStack)) {
 Persist and reuse values across frames:
 
 ```java
-float timer = floatRegistry.getOrDefault("myTimer", 0.0);
+float timer = floatRegistry.getOrDefault("myTimer", 0.0); //get value from a registry, if not exists returns 0.0
 timer += HoldMyItems.getDeltaTime();
-floatRegistry.put("myTimer", timer);
+floatRegistry.putIfAbsent("myTimer", timer); // create a variable in a registry
 ```
 
 Use it for:
