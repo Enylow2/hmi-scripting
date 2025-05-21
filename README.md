@@ -165,23 +165,17 @@ The `I` class provides functions to inspect the item currently being rendered. Y
 
 Returns `true` if the item is exactly a Diamond Sword.
 
-* * * * *
-
 ### 🏷 Checking Item Tags
 
 `I.isIn(itemStack, ItemTags.SWORDS);`
 
 Returns `true` if the item is in the `#swords` tag.
 
-* * * * *
-
 ### ❌ Checking if Hand is Empty
 
 `I.isEmpty(itemStack);`
 
 Returns `true` if the player's hand is empty.
-
-* * * * *
 
 ### 🔍 Example Use
 
@@ -198,24 +192,12 @@ if (I.isEmpty(itemStack)) {
     M.rotateZ(matrices, 45);
 }`
 
-* * * * *
-
 ### 📦 Item and Tag References
 
 -   `Items` class contains every item in the game:
-
-    java
-
-    КопироватьРедактировать
-
     `Items.APPLE, Items.CARROT, Items.CROSSBOW, ...`
 
 -   `ItemTags` contains built-in tag groups:
-
-    java
-
-    КопироватьРедактировать
-
     `ItemTags.SWORDS, ItemTags.LOGS, ItemTags.BANNERS, ...`
 ---
 ## 📂 Float Registry
