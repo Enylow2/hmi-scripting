@@ -1,7 +1,7 @@
 
 # Hold My Items
 
-**Hold My Items** is a powerful and flexible **first-person animation mod for Minecraft 1.21.5**, allowing resource packs to define fully custom animations using JavaScript. Whether you're making swords feel more impactful, tools look more realistic, or just creating stylish motion effects — this mod gives you full control over how items and hands animate in first person.
+**Hold My Items** is a **first-person animation mod for Minecraft 1.21.5**, allowing resource packs to define fully custom animations using JavaScript. Whether you're making swords feel more impactful, tools look more realistic, or just creating stylish motion effects — this mod gives you full control over how items and hands animate in first person.
 
 ## ✨ Features
 
